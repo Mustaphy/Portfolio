@@ -3,18 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background: linear-gradient(to right, #000033, #00001a);
-    height: 100vh;
+    color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Navigation bar */
+body {
+    background: linear-gradient(to right, #2a475e, #1b2838);
+}
+
+/* Navigation Bar */
 header {
-    position: fixed;
     display: flex;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
     padding: 30px 60px;
@@ -41,15 +41,63 @@ header {
     color: blue;
 }
 
+/* Sticky Navigation Bar */
 header.sticky {
     padding: 10px 60px;
     background: white;
 }
 
-header.sticky #navigation-name, header.sticky nav #navigation-links li a {
+.navigation-link {
     color: black;
 }
 
 header.sticky nav #navigation-links li a:hover {
     color: blue;
+}
+
+/* Landing Page */
+#landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+}
+
+#landing-text {
+    width: 50vw;
+    max-width: 50vw;
+    padding: 0 100px;
+}
+
+#landing-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#landing-text p {
+    font-size: 20px;
+}
+
+#landing-button {
+    margin: 30px 0;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #1b2838;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 4px 4px 4px #000000;
+    cursor: pointer;
+}
+
+#landing-image-container {
+    width: 50vw;
+    max-width: 50vw;
+}
+
+#landing-image-container img {
+    width: 45vw;
+    height: auto;
 }
