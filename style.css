@@ -3,28 +3,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background: linear-gradient(to right, #2a475e, #1b2838);
+    background: linear-gradient(to right, #1b2838, #171a21);
 }
 
 /* Navigation Bar */
 header {
     display: flex;
-    position: sticky;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     padding: 30px 60px;
     transition: 0.5s;
     width: 100%;
+    z-index: 2;
 }
 
 #navigation-name {
-    color: white;
-    font-weight: 600;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 #navigation-links li {
@@ -38,21 +39,25 @@ header {
 
 #navigation-links li a:hover {
     transition: 0.5s;
-    color: blue;
+    color: #66c0f4;
 }
 
 /* Sticky Navigation Bar */
 header.sticky {
     padding: 10px 60px;
-    background: white;
+    background: #ffffff;
 }
 
-.navigation-link {
-    color: black;
+header.sticky #navigation-name {
+    color: #000000;
 }
 
-header.sticky nav #navigation-links li a:hover {
-    color: blue;
+header.sticky nav #navigation-links li .navigation-link {
+    color: #000000;
+}
+
+header.sticky nav #navigation-links li .navigation-link:hover {
+    color: #66c0f4;
 }
 
 /* Landing Page */
@@ -61,8 +66,9 @@ header.sticky nav #navigation-links li a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 70vh;
+    min-height: 80vh;
     width: 100%;
+    color: #ffffff;
 }
 
 #landing-text {
@@ -85,7 +91,8 @@ header.sticky nav #navigation-links li a:hover {
     padding: 15px 20px;
     font-size: 20px;
     font-weight: bold;
-    background: #1b2838;
+    background: #171a21;
+    color: #ffffff;
     border: none;
     border-radius: 40px;
     box-shadow: 4px 4px 4px #000000;
@@ -93,11 +100,36 @@ header.sticky nav #navigation-links li a:hover {
 }
 
 #landing-image-container {
-    width: 50vw;
-    max-width: 50vw;
+    width: 45vw;
 }
 
-#landing-image-container img {
-    width: 45vw;
-    height: auto;
+/* About Me */
+#about-me-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 0 15vw;
+    padding: 25px;
+    background: #2a475e;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.7px);
+    -webkit-backdrop-filter: blur(10.7px);
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+#about-me-image {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+#about-me-title {
+    padding: 20px 0;
+    font-size: 45px;
+}
+
+#about-me-text {
+    text-align: center;
+    font-size: 25px;
 }
